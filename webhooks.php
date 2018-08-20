@@ -101,8 +101,8 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 	
 
 } else if (($inputtext == "นักวางแผนการเงิน")||($inputtext == "การเงิน")||($inputtext == "สุดยอด")||($inputtext == "เบื้องหลัง")) {
-//	$arrPostData['messages'][0]['type'] = 'text';
-//	$arrPostData['messages'][0]['text'] = "http://www.avenger-planner.com/about/suwat-logpeet/";
+	$arrPostData['messages'][0]['type'] = 'text';
+	$arrPostData['messages'][0]['text'] = "http://www.avenger-planner.com/about/suwat-logpeet/";
 	
 }else{
  	$arrPostData['messages'][0]['type'] = 'text';
