@@ -96,7 +96,7 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 	$arrPostData['messages'][0]['previewImageUrl'] = "https://teen.mthai.com/app/uploads/2018/01/DPZXduGUQAERaye-1.jpg";
 	
 } else if ($inputtext == "ขอเพลง") {
-	$arrPostData['messages'][0]['type'] = "text";
+	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['originalContentUrl'] = "https://www.youtube.com/watch?v=mfqJyKm20Z4";
 	$arrPostData['messages'][0]['previewImageUrl'] = "https://www.youtube.com/watch?v=mfqJyKm20Z4";
 
