@@ -90,7 +90,7 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 	$arrPostData['messages'][0]['originalContentUrl'] = "https://still-beach-54304.herokuapp.com/p1.jpg";
 	$arrPostData['messages'][0]['previewImageUrl'] = "https://still-beach-54304.herokuapp.com/p2.jpg";
 
-} else if ($inputtext == "ชอบเพลงอะไร") {
+} else if (($inputtext == "ชอบวงอะไร")||($inputtext == "BNK48")||($inputtext == "น่ารัก")||($inputtext == "ร้องเพลง")) {
 	$arrPostData['messages'][0]['type'] = "image";
 	$arrPostData['messages'][0]['originalContentUrl'] = "https://teen.mthai.com/app/uploads/2018/01/DPZXduGUQAERaye-1.jpg";
 	$arrPostData['messages'][0]['previewImageUrl'] = "https://teen.mthai.com/app/uploads/2018/01/DPZXduGUQAERaye-1.jpg";
@@ -100,9 +100,9 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 	$arrPostData['messages'][0]['text'] = "https://www.youtube.com/watch?v=mfqJyKm20Z4";
 	
 
-} else if ($inputtext == "เรียนที่ไหน") {
+} else if (($inputtext == "นักวางแผนการเงิน")||($inputtext == "การเงิน")||($inputtext == "สุดยอด")||($inputtext == "เบื้องหลัง")) {
 //	$arrPostData['messages'][0]['type'] = 'text';
-//	$arrPostData['messages'][0]['text'] = "https://www.facebook.com/RSU.IT.SMT";
+//	$arrPostData['messages'][0]['text'] = "http://www.avenger-planner.com/about/suwat-logpeet/";
 	
 }else{
  	$arrPostData['messages'][0]['type'] = 'text';
