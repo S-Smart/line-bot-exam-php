@@ -1,7 +1,12 @@
-<?php // callback.php
-require "vendor/autoload.php";
-require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
-$access_token = 'PTKs1qARADFbxymTqYk2B2mADMAPJ3682bYxHc6bK0qJUXAWxMONLprw7WTtoAMvcMI8Pg1slbQyJNZspE40izNjimVqC0s2bmgkoLILLIy023GkqvogB3wWmEbPScWSmSsS5skK16IDMLcGsAxZzgdB04t89/1O/w1cDnyilFU=';
+//<?php // callback.php
+//require "vendor/autoload.php";
+//require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
+//$access_token = 'PTKs1qARADFbxymTqYk2B2mADMAPJ3682bYxHc6bK0qJUXAWxMONLprw7WTtoAMvcMI8Pg1slbQyJNZspE40izNjimVqC0s2bmgkoLILLIy023GkqvogB3wWmEbPScWSmSsS5skK16IDMLcGsAxZzgdB04t89/1O/w1cDnyilFU=';
+
+
+<?php
+
+$strAccessToken = "PTKs1qARADFbxymTqYk2B2mADMAPJ3682bYxHc6bK0qJUXAWxMONLprw7WTtoAMvcMI8Pg1slbQyJNZspE40izNjimVqC0s2bmgkoLILLIy023GkqvogB3wWmEbPScWSmSsS5skK16IDMLcGsAxZzgdB04t89/1O/w1cDnyilFU=";
 
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
