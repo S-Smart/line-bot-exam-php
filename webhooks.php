@@ -95,10 +95,10 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 	$arrPostData['messages'][0]['originalContentUrl'] = "https://teen.mthai.com/app/uploads/2018/01/DPZXduGUQAERaye-1.jpg";
 	$arrPostData['messages'][0]['previewImageUrl'] = "https://teen.mthai.com/app/uploads/2018/01/DPZXduGUQAERaye-1.jpg";
 	
-} else if ($inputtext == "ขอเพลง") {
+} else if (($inputtext == "ขอเพลง")||($inputtext == "คุกกี้เสี่ยงทาย")) {
 	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['originalContentUrl'] = "https://www.youtube.com/watch?v=mfqJyKm20Z4";
-	$arrPostData['messages'][0]['previewImageUrl'] = "https://www.youtube.com/watch?v=mfqJyKm20Z4";
+	$arrPostData['messages'][0]['text'] = "https://www.youtube.com/watch?v=mfqJyKm20Z4";
+	
 
 } else if ($inputtext == "เรียนที่ไหน") {
 //	$arrPostData['messages'][0]['type'] = 'text';
