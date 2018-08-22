@@ -61,12 +61,13 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 	//$humi = curl_setopt($ch, CURLOPT_URL,"https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/get/V2";
 	//curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 	//curl_setopt($ch, CURLOPT_HEADER, FALSE);
-
+	$h = json_decode($ch, true);
+  	$hu = $h['temperature'];
 	
-	curl_exec($ch);
+	//curl_exec($ch);
 	//curl_close($ch);
 
-    	var_dump($ch);
+    	//var_dump($ch);
 
 			    
   	//$s = file_get_contents("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/get/V1");
@@ -76,7 +77,7 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
  	//$h2 = json_decode($s2, true);
  	//$hu2 = $h2['V2'];
 	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "อุณหภูมิ " . $ch . " C | ความชื้น " . $humi . " %";
+	$arrPostData['messages'][0]['text'] = "อุณหภูมิ " . $hu . " C | ความชื้น " . $humi . " %";
 
 } else if ($inputtext == "แผนที่") {
 	$arrPostData['messages'][0]['type'] = "location";
