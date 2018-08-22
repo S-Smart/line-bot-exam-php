@@ -100,10 +100,14 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 	$arrPostData['messages'][0]['text'] = "https://www.youtube.com/watch?v=mfqJyKm20Z4";
 	
 
-} else if (($inputtext == "นักวางแผนการเงิน")||($inputtext == "การเงิน")||($inputtext == "สุดยอด")||($inputtext == "เบื้องหลัง")) {
+} else if (($inputtext == "Air Condition Status")||($inputtext == "ON Air Condition")||($inputtext == "OFF Air Condition")) {
+	$arrPostData['messages'][0]['type'] = 'text';
+	$arrPostData['messages'][0]['text'] = "ขอบคุณที่ให้ผมได้ช่วยเหลือคุณ แต่..ขณะนี้ผมยังไม่สามารถสั่งงานได้ครับ";
+	
+} else if (($inputtext == "")||($inputtext == "ผู้สร้าง")||($inputtext == "สุดยอด")||($inputtext == "เบื้องหลัง")) {
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "http://www.avenger-planner.com/about/suwat-logpeet/";
-	
+
 }else{
  	$arrPostData['messages'][0]['type'] = 'text';
  	$arrPostData['messages'][0]['text'] = "ไม่เข้าใจคำสั่งครับท่าน";
