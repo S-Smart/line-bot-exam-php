@@ -64,7 +64,7 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 
 	
 	$response = curl_exec($ch);
-	curl_close($ch);
+	//curl_close($ch);
 
     	$temp = var_dump($response);
 
