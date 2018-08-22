@@ -66,7 +66,7 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 	curl_exec($ch);
 	//curl_close($ch);
 
-    	//var_dump($ch);
+    	var_dump($ch);
 
 			    
   	//$s = file_get_contents("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/get/V1");
