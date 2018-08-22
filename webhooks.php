@@ -41,18 +41,18 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 //	$arrPostData['messages'][0]['text'] = "ปิดไฟแล้วครับ";
 
 } else if ($inputtext == "ความชื้น") {
-  //	$s = file_get_contents("http://128.199.137.43:3000/smtbot2017/variable/humidity");
+	$s = file_get_contents("http://128.199.137.43:3000/smtbot2017/variable/humidity");
  	 $h = json_decode($s, true);
   	$hu = $h['humidity'];
-//	$arrPostData['messages'][0]['type'] = 'text';
-//	$arrPostData['messages'][0]['text'] = "ความชื้นสัมพัธน์ตอนนี้ " . $hu . "%";
+	$arrPostData['messages'][0]['type'] = 'text';
+	$arrPostData['messages'][0]['text'] = "ความชื้นสัมพัธน์ตอนนี้ " . $hu . "%";
 
 } else if ($inputtext == "อุณหภูมิ") {
-  //	$s = file_get_contents("http://128.199.137.43:3000/smtbot2017/variable/temperature");
+  	$s = file_get_contents("http://128.199.137.43:3000/smtbot2017/variable/temperature");
   	$h = json_decode($s, true);
   	$hu = $h['temperature'];
-//	$arrPostData['messages'][0]['type'] = 'text';
-//	$arrPostData['messages'][0]['text'] = "อุณหภูมิตอนนี้ " . $hu . " C";
+	$arrPostData['messages'][0]['type'] = 'text';
+	$arrPostData['messages'][0]['text'] = "อุณหภูมิตอนนี้ " . $hu . " C";
 
 } else if ($inputtext == "Air Condition Status") {
 	//$ch = curl_init();
@@ -62,7 +62,7 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 	//curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 	//curl_setopt($ch, CURLOPT_HEADER, FALSE);
 	$h = json_decode($s, true);
-  	$hu = $h['temperature'];
+  	$hu = $h['V1'];
 	
 	//curl_exec($ch);
 	//curl_close($ch);
