@@ -62,7 +62,7 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 	//curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 	//curl_setopt($ch, CURLOPT_HEADER, FALSE);
 	$h = json_decode($s, true);
-  	$hu = $h['V1'];
+  	$hu = $h['temperature'];
 	
 	//curl_exec($ch);
 	//curl_close($ch);
