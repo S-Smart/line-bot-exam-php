@@ -60,7 +60,7 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 } else if ($inputtext == "Air Condition Status") {
 	//$ch = curl_init();
 
-	$temp = (curl_init,"https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/get/V1";
+	$temp = (curl_init,("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/get/V1");
 	//$humi = curl_setopt($ch, CURLOPT_URL,"https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/get/V2";
 	//curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 	//curl_setopt($ch, CURLOPT_HEADER, FALSE);
