@@ -54,15 +54,15 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 //	$arrPostData['messages'][0]['type'] = 'text';
 //	$arrPostData['messages'][0]['text'] = "อุณหภูมิตอนนี้ " . $hu . " C";
 
-} else if ($inputtext == "อากาศ") {
- // 	$s = file_get_contents("http://128.199.137.43:3000/smtbot2017/variable/temperature");
+} else if ($inputtext == "Air Condition Status") {
+  	$s = file_get_contents("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/get/V1");
   	$h = json_decode($s, true);
   	$hu = $h['temperature'];
- 	$s2 = file_get_contents("http://128.199.137.43:3000/smtbot2017/variable/humidity");
+ 	$s2 = file_get_contents("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/get/V2");
  	$h2 = json_decode($s2, true);
  	$hu2 = $h2['humidity'];
-//	$arrPostData['messages'][0]['type'] = 'text';
-//	$arrPostData['messages'][0]['text'] = "อุณหภูมิ " . $hu . " C | ความชื้น " . $hu2 . " %";
+	$arrPostData['messages'][0]['type'] = 'text';
+	$arrPostData['messages'][0]['text'] = "อุณหภูมิ " . $hu . " C | ความชื้น " . $hu2 . " %";
 
 } else if ($inputtext == "แผนที่") {
 	$arrPostData['messages'][0]['type'] = "location";
@@ -100,7 +100,7 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 	$arrPostData['messages'][0]['text'] = "https://www.youtube.com/watch?v=mfqJyKm20Z4";
 	
 
-} else if (($inputtext == "Air Condition Status")||($inputtext == "ON Air Condition")||($inputtext == "OFF Air Condition")) {
+} else if (($inputtext == "ON Air Condition")||($inputtext == "OFF Air Condition")) {
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "ขอบคุณที่ให้ผมได้ช่วยเหลือคุณ แต่..ขณะนี้ผมยังไม่สามารถสั่งงานได้ครับ";
 	
