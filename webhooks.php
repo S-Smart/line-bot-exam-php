@@ -56,13 +56,13 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 
 } else if ($inputtext == "Air Condition Status") {
   	$s = file_get_contents("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/get/V1");
-  	$h = json_decode($s, true);
-  	$hu = $h['V1'];
+  	//$h = json_decode($s, true);
+  	//$hu = $h['V1'];
  	$s2 = file_get_contents("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/get/V2");
- 	$h2 = json_decode($s2, true);
- 	$hu2 = $h2['V2'];
+ 	//$h2 = json_decode($s2, true);
+ 	//$hu2 = $h2['V2'];
 	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "อุณหภูมิ " . $hu . " C | ความชื้น " . $hu2 . " %";
+	$arrPostData['messages'][0]['text'] = "อุณหภูมิ " . $s . " C | ความชื้น " . $s2 . " %";
 
 } else if ($inputtext == "แผนที่") {
 	$arrPostData['messages'][0]['type'] = "location";
