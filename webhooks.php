@@ -9,8 +9,6 @@ $arrJson = json_decode($content, true);
 $strUrl = "https://api.line.me/v2/bot/message/reply";
 $inputtext = $arrJson['events'][0]['message']['text'];
 $w = (explode(" ",$inputtext)); //ถ้าถามอากาศ เช่น อากาศ เชียงใหม่
-$temp = "https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/get/V1";
-$humi = "https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/get/V2";
 
 $arrPostData = array();
 	
@@ -57,6 +55,10 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 //	$arrPostData['messages'][0]['text'] = "อุณหภูมิตอนนี้ " . $hu . " C";
 
 } else if ($inputtext == "Air Condition Status") {
+	$ch = curl_init();
+
+	$temp = curl_setopt($ch, CURLOPT_URL,"https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/get/V1";
+	$humi = curl_setopt($ch, CURLOPT_URL,"https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/get/V2";		    
   	//$s = file_get_contents("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/get/V1");
   	//$h = json_decode($s, true);
   	//$hu = $h['V1'];
