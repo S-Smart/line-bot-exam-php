@@ -43,24 +43,24 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 } else if ($inputtext == "ON Air Condition") {
   	//$mode = curl_init("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/update/V36?value=1");
   	//curl_exec($mode);
-  	//$digital = curl_init("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/update/V36?value=1");
-  	//curl_exec($digital);
-	$ch = curl_init();
+  	$digital = curl_init("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/update/V36?value=1");
+  	curl_exec($digital);
+	//$ch = curl_init();
 
-	curl_setopt($ch, CURLOPT_URL, "https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/update/V36");
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-	curl_setopt($ch, CURLOPT_HEADER, FALSE);
+	//curl_setopt($ch, CURLOPT_URL, "https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/update/V36");
+	//curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+	//curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
-	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+	//curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
 
-	curl_setopt($ch, CURLOPT_POSTFIELDS, "[\"1\"]");
+	//curl_setopt($ch, CURLOPT_POSTFIELDS, "[\"1\"]");
 
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/json"));
+	//curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/json"));
 
-	$response = curl_exec($ch);
-	curl_close($ch);
+	//$response = curl_exec($ch);
+	//curl_close($ch);
 
-	var_dump($response);
+	//var_dump($response);
 	
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "Air condition is ON";
