@@ -43,8 +43,8 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 } else if ($inputtext == "ON Air Condition") {
   	//$mode = curl_init("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/update/V36?value=1");
   	//curl_exec($mode);
-  	$digital = curl_init("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/update/V36?value=1");
-  	curl_exec($digital);
+  	//$digital = curl_init("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/update/V36?value=1");
+  	//curl_exec($digital);
 	//$ch = curl_init();
 
 	//curl_setopt($ch, CURLOPT_URL, "https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/update/V36");
@@ -61,7 +61,7 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 	//curl_close($ch);
 
 	//var_dump($response);
-	
+	avatar_url ("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/update/V36?value=1");
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "Air condition is ON";
 
