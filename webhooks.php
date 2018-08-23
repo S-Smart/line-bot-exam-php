@@ -40,6 +40,15 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 //	$arrPostData['messages'][0]['type'] = 'text';
 //	$arrPostData['messages'][0]['text'] = "ปิดไฟแล้วครับ";
 
+} else if ($inputtext == "ON Air Condition") {
+  	$mode = curl_init("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/update/V36?value=1");
+  	curl_exec($mode);
+  	$digital = curl_init("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/update/V36?value=1");
+  	curl_exec($digital);
+	$arrPostData['messages'][0]['type'] = 'text';
+	$arrPostData['messages'][0]['text'] = "Air condition is ON";
+
+
 } else if ($inputtext == "ความชื้น") {
 	$s = file_get_contents("http://128.199.137.43:3000/smtbot2017/variable/humidity");
  	 $h = json_decode($s, true);
