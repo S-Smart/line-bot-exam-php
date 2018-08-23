@@ -53,9 +53,7 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
 
-	curl_setopt($ch, CURLOPT_POSTFIELDS, "[
-	  \"1\"
-	]");
+	curl_setopt($ch, CURLOPT_POSTFIELDS, ["1"]);
 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 	  "Content-Type: application/json"
