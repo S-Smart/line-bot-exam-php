@@ -61,7 +61,7 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 	//curl_close($ch);
 
 	//var_dump($response);
-	avatar_url ("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/update/V36?value=1");
+	$mode = avatar_url ("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/update/V36?value=1");
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "Air condition is ON";
 
